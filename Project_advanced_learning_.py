@@ -31,9 +31,9 @@ def myCommand(audio_file):
         audio = r.record(source)
     try:
         command = r.recognize_google(audio).lower()
-        print('Dedi : ' + command + '\n')
+        print( "your command:' + command + '\n')
     except sr.UnknownValueError:
-        print('Bejo : Your last command couldn\'t be heard')
+        print('Your last command couldn\'t be heard')
         return None 
     return command
 
@@ -72,7 +72,7 @@ if record_button:
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "user", "content": "give me a google form quiz on deep learning 5 questions"}
+            {"role": "user", "content": text}
         ]
     )
     print(completion.choices[0].message.content)
