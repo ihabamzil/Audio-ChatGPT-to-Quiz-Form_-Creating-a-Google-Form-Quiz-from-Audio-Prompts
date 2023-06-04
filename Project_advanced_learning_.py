@@ -21,7 +21,7 @@ import wave
 import tempfile
 import functools
 #--Définition de la clé API OpenAI---#
-openai.api_key = "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"
+openai.api_key = "The key"
 
 # Convert speech to text
 @st.cache_data
